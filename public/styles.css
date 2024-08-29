@@ -64,9 +64,7 @@ p {
   border: 0px;
   cursor: pointer;
   background-color: white;
-
   text-decoration: underline;
-
   width: 60px;
   text-align: left;
   padding-left: 0px;
@@ -79,7 +77,6 @@ p {
 .message {
   display: flex;
   flex-direction: column;
-
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -89,7 +86,6 @@ p {
   flex-direction: column;
   gap: 5px;
   font-weight: bold;
-
 }
 
 .message-body {

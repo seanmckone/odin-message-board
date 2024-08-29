@@ -57,8 +57,6 @@ indexRouter.post('/new', (req, res) => {
   messageId++;
 
   res.redirect("/");
-  
-  
 });
 
 // Export router
