@@ -48,17 +48,14 @@ indexRouter.get('*', (req, res) => {
 
 indexRouter.post('/new', (req, res) => {
 
-  // Uncomment below code to allow adding messages
-  // Disabled to prevent vandalism
+  messages.push({ 
+    id: messageId,
+    text: req.body.messageBodyInput, 
+    user: req.body.usernameInput, 
+    added: new Date().toLocaleDateString("en-US")
+  });
 
-  // messages.push({ 
-  //   id: messageId,
-  //   text: req.body.messageBodyInput, 
-  //   user: req.body.usernameInput, 
-  //   added: new Date().toLocaleDateString("en-US")
-  // });
-
-  // messageId++;
+  messageId++;
 
   res.redirect("/");
 });
