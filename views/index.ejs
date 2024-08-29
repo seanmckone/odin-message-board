@@ -10,16 +10,16 @@
 <body>
   <div id="content">
   <a href="/" id="title">Mini Message Board</a>
-  <a href="/new" id="newPost">post</a>
+  <a href="/new" id="new-post">post</a>
   <div id="messages">
     <% for (let i = messages.length -1; i >= 0; i--) { %>
       <div class="message">
-        <div class="messageHeader">
+        <div class="message-header">
           <p class="username"> <%= messages[i].user %> </p>
           <p class="date"> <%= messages[i].added %> </p>
         </div>
-        <p> <%= messages[i].text %> </p>
-        <a href="/messages/<%= messages[i].id %>" class="viewMessage">view message</a>
+        <p class="message-body"> <%= messages[i].text %> </p>
+        <a href="/messages/<%= messages[i].id %>" class="view-message">view message</a>
       </div>
     <% } %>
   </div>

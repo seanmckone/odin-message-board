@@ -16,4 +16,4 @@ app.use(express.static(assetsPath));
 
 app.use('/', indexRouter);
 
-app.listen(PORT, () => console.log('listening'));
+app.listen(PORT, () => console.log(`listening at localhost:${PORT}`));

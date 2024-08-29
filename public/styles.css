@@ -1,5 +1,14 @@
-body {
+*, html{
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --link-color: #0084FE;
+  --secondary-color: #EFEFEF;
+}
+
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +23,9 @@ p {
 #content {
   max-width: 1200px;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 #content, form {
@@ -28,31 +40,69 @@ p {
   color: black;
 }
 
-#newPost {
+#title:hover {
+  color: var(--link-color);
+}
+
+#new-post, #submit-button {
   font-size: 25px;
-  color: blue;
+  color: var(--link-color);
+}
+
+#username-input, #message-body-input {
+  border: 0px;
+  background-color: var(--secondary-color);
+  font-size: 16px;
+  padding: 8px;
+}
+
+#message-body-input {
+  height: 40ch;
+}
+
+#submit-button {
+  border: 0px;
+  cursor: pointer;
+  background-color: white;
+
+  text-decoration: underline;
+
+  width: 60px;
+  text-align: left;
+  padding-left: 0px;
+}
+
+#messages > .message {
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .message {
-  border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 
-  margin-top: 10px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.messageHeader {
+.message-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: bold;
+
 }
 
-.viewMessage {
-  text-align: right;
-  color: blue;
+.message-body {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.username {
+.view-message {
+  text-align: left;
+  color: black;
+  font-style: italic;
+}
+
+::placeholder {
   font-style: italic;
 }

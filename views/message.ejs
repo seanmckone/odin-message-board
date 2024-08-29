@@ -10,11 +10,13 @@
 <body>
   <div id="content">
     <a href="/" id="title">Mini Message Board</a>
-      <div class="messageHeader">
+    <div class="message">
+      <div class="message-header">
         <p class="username"> <%= message.user %> </p>
         <p class="date"> <%= message.added %> </p>
       </div>
-      <p> <%= message.text %> </p>
+      <p class="message-body"> <%= message.text %> </p>
+    </div>
   </div>
 </body>
 </html>
