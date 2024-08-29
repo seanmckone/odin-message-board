@@ -10,11 +10,14 @@
   <p>Messages:</p>
   <a href="/new">post</a>
   <div class="messages">
-    <% for (const message of messages) { %>
+    <% for (let i = messages.length -1; i >= 0; i--) { %>
       <div class="message" style="border: 1px solid black; margin-bottom: 10px;">
-        <p> <%= message.text %> </p>
-        <p> <%= message.user %> </p>
-        <p> <%= message.added %> </p>
+        <p>User: <%= messages[i].user %> </p>
+        
+        <p> <%= messages[i].text %> </p>
+        
+        <p> <%= messages[i].added %> </p>
+        <a href="/messages/<%= messages[i].id %>">view message</a>
       </div>
     <% } %>
   </div>
