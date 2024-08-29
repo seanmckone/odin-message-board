@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const indexRouter = Router();
 
-
 const messages = [
   {
     id: 0,
@@ -19,7 +18,7 @@ const messages = [
 
 let messageId = messages.length;
 
-
+// Routing
 indexRouter.get('/', (req, res) => {
   res.render('index', { messages: messages });
 });
@@ -27,7 +26,7 @@ indexRouter.get('/', (req, res) => {
 indexRouter.get('/messages/:id', (req, res) => {
   if (messages[req.params.id]) { 
     res.render('message', { message: messages[req.params.id] });
-  }
+  } 
   else {
     res.render('404');
   }
@@ -46,10 +45,13 @@ indexRouter.post('/new', (req, res) => {
     id: messageId,
     text: req.body.messageBody, 
     user: req.body.username, 
-    added: new Date() });
+    added: new Date() 
+  });
 
   res.redirect("/");
+  
   messageId++;
 });
 
+// Export router
 module.exports = indexRouter; 
