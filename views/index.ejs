@@ -18,7 +18,7 @@
           <p class="username"> <%= messages[i].user %> </p>
           <p class="date"> <%= messages[i].added %> </p>
         </div>
-        <p class="messageText"> <%= messages[i].text %> </p>
+        <p> <%= messages[i].text %> </p>
         <a href="/messages/<%= messages[i].id %>" class="viewMessage">view message</a>
       </div>
     <% } %>
