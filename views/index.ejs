@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Message Board</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <a href="/">Mini Message Board</a>
-  <p>Messages:</p>
-  <a href="/new">post</a>
-  <div class="messages">
+  <div id="content">
+  <a href="/" id="title">Mini Message Board</a>
+  <a href="/new" id="newPost">post</a>
+  <div id="messages">
     <% for (let i = messages.length -1; i >= 0; i--) { %>
-      <div class="message" style="border: 1px solid black; margin-bottom: 10px;">
-        <p>User: <%= messages[i].user %> </p>
-        
-        <p> <%= messages[i].text %> </p>
-        
-        <p> <%= messages[i].added %> </p>
-        <a href="/messages/<%= messages[i].id %>">view message</a>
+      <div class="message">
+        <div class="messageHeader">
+          <p class="username"> <%= messages[i].user %> </p>
+          <p class="date"> <%= messages[i].added %> </p>
+        </div>
+        <p class="messageText"> <%= messages[i].text %> </p>
+        <a href="/messages/<%= messages[i].id %>" class="viewMessage">view message</a>
       </div>
     <% } %>
+  </div>
   </div>
 </body>
 </html>

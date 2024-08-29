@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>View Message</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <a href="/">Mini Message Board</a>
-  <p> <%= message.text %> </p>
-  <p> <%= message.user %> </p>
-  <p> <%= message.added %> </p>
+  <div id="content">
+    <a href="/" id="title">Mini Message Board</a>
+      <div class="messageHeader">
+        <p class="username"> <%= message.user %> </p>
+        <p class="date"> <%= message.added %> </p>
+      </div>
+      <p> <%= message.text %> </p>
+  </div>
 </body>
 </html>

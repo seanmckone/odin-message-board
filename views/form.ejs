@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Message</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <a href="/">Mini Message Board</a>
-  <p>new post time!</p>
-  <form method="POST" action="/new">
-    <input type="text" id="username" name="username" placeholder="username">
-    <textarea id="messagebody" name="messageBody" placeholder="message"></textarea>
-    <input type="submit">
-  </form>
+  <div id="content">
+    <a href="/" id="title">Mini Message Board</a>
+    <p>new post time!</p>
+    <form method="POST" action="/new">
+      <input type="text" id="username" name="username" placeholder="username">
+      <textarea id="messagebody" name="messageBody" placeholder="message"></textarea>
+      <input type="submit">
+    </form>
+  </div>
 </body>
 </html>
